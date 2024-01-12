@@ -1,22 +1,21 @@
+import React from 'react';
+import Header from './Header';
+import TaskList from './TaskList';
 
-  import Header from './Header';
-  import TaskList from './TaskList';
-  import Task from './Task';
-  
-  function App  (){
-    const task = [
-      { name: 'Hacer la compra', completed: false },
-      { name: 'Hacer ejercicio', completed: true },
-      // Agrega más tareas según sea necesario
-    ];
-  
-    return (
-      <div>
-        <Header />
-              <TaskList task={task} />
-              <task/>
-               </div>
-    );
-  }
-  
+function App() {
+  const tasks = [
+    { name: 'Hacer la compra', completed: false },
+    { name: 'Hacer ejercicio', completed: false },
+    { name: 'Hacer  BMX', completed: true },
+    // Agrega más tareas según sea necesario
+  ];
+
+  return (
+    <div>
+      <Header />
+      <TaskList tasks={tasks} />
+    </div>
+  );
+}
+
 export default App;
