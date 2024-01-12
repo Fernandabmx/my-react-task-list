@@ -1,15 +1,12 @@
-// TaskList.js
+import React from 'react';
 import Task from './Task';
-function TaskList() {
+
+function TaskList({ tasks }) {
   return (
     <div>
-      <ul>
-      <li>Hacer la cama </li>
-      <li>Hacer eñ almuerzo</li>
-      <li>Hacer el amor</li>
-      <li>Hacer mercado </li>
-      <li>Hacer aseo</li>
-      </ul>
+      {tasks.map((task, index) => (
+        <Task key={index} name={task.name} completed={task.completed} />
+      ))}
     </div>
   );
 }
