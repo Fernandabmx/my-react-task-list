@@ -1,16 +1,12 @@
+import React from 'react';
 
-import TaskList from './TaskList';
-
-function Task ({ name, completed }){
+function Task({ name, completed }) {
   return (
-    <label>
-        <input type="checkbox" id='cbox1' value="firs-checkbox">
-        <li>Hacer la cama </li>
-
-                </input>
-    </label>
-    
-  )
+    <div>
+      <input type="checkbox" checked={completed} />
+      <span>{name}</span>
+    </div>
+  );
 }
 
 export default Task;
